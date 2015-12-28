@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Page Title</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css">
+</head>
+<body>
+
+  <!-- ========= -->
+  <!-- HTML -->
+  <!-- ========= -->
+
+  <!-- MENU -->
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainMenu">
+        </button>
+        <a id="menu-main" class="navbar-brand" href="#">LOGO</a>
+      </div>
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="nav navbar-nav">
+            <li id="menu-aboutus"><a href="#">O nas</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Oferta<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="offer1">Kategoria 1</a></li>
+                <li><a href="offer2">Kategoria 2</a></li>
+              </ul>
+            </li>
+            <li id="menu-contact"><a href="#">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <!-- TRESC STRONY -->
+  <div class="container-fluid" id="page-content">
+    <noscript>
+      <h1>Nie można otworzyć strony.</h1>
+      <p>Nasza strona wymaga włączonej obsługi JavaScript. Możesz to zrobić w ustawieniach swojej przeglądarki.</p>
+    </noscript>
+
+    <div id="mainPageContent">
+      <h1>Main Page Content</h1>
+    </div>
+
+    <div id="aboutUsContent">
+      <h1>About Us</h1>
+    </div> 
+
+    <div id="contactContent">
+      <h1>Contact</h1>
+    </div>
+
+    <div id="simplicity" class="hidden">
+      <p>This is way simplier, smaller, faster...</p>
+    </div>
+  </div>
+
+<!-- STOPKA -->
+  <div class="footer">
+    <div class="container-fluid">
+      <p>for <b>MJoto.pl</b> by Magdalena Jędrzejczyk</p>
+    </div>
+  </div>
+
+
+  <!-- ========= -->
+  <!-- Libraries -->
+  <!-- ========= -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+  <!-- =============== -->
+  <!-- Javascript code -->
+  <!-- =============== -->
+  <script type="text/javascript">
+
+    $(document).ready(function (){
+
+      showDiv($("#mainPageContent"));
+      alert("Ciasteczka, głupcze!");
+
+      $("#menu-main").click(function(){
+        showDiv($("#mainPageContent"));
+      });
+
+      $("#menu-aboutus").click(function(){
+        showDiv($("#aboutUsContent"));
+      });
+
+      $("#menu-contact").click(function(){
+        showDiv($("#contactContent"));
+      });
+
+    });
+
+    function showDiv(target) {
+      hideAllDivs();
+      target.show();
+    }
+
+    function hideAllDivs() {
+      $("#page-content").children().hide();
+    }
+  </script>
+  
+</body>
+</html>
