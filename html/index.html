@@ -23,48 +23,45 @@
       </div>
         <div class="collapse navbar-collapse" id="mainMenu">
           <ul class="nav navbar-nav">
-            <li id="menu-aboutus"><a href="#">O nas</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Oferta<span class="caret"></span></a>
+            <li id="menu-1"><a href="#">Menu1</a></li>
+            <li id="menu-2" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu2<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="offer1">Kategoria 1</a></li>
-                <li><a href="offer2">Kategoria 2</a></li>
+                <li><a href="cat1">Category1</a></li>
+                <li><a href="cat2">Category2</a></li>
               </ul>
             </li>
-            <li id="menu-contact"><a href="#">Kontakt</a></li>
+            <li id="menu-3"><a href="#">Menu3</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-  <!-- TRESC STRONY -->
+  <!-- SITE BODY -->
   <div class="container-fluid" id="page-content">
     <noscript>
-      <h1>Nie można otworzyć strony.</h1>
-      <p>Nasza strona wymaga włączonej obsługi JavaScript. Możesz to zrobić w ustawieniach swojej przeglądarki.</p>
+      <h1>You cannot open this website.</h1>
+      <p>Our website requires JavaScript. Please, turn it on.</p>
     </noscript>
 
     <div id="mainPageContent">
       <h1>Main Page Content</h1>
     </div>
 
-    <div id="aboutUsContent">
+    <div id="menu1">
       <h1>About Us</h1>
     </div> 
 
-    <div id="contactContent">
+    <div id="menu3">
       <h1>Contact</h1>
     </div>
 
-    <div id="simplicity" class="hidden">
-      <p>This is way simplier, smaller, faster...</p>
-    </div>
   </div>
 
-<!-- STOPKA -->
+<!-- FOOTER -->
   <div class="footer">
     <div class="container-fluid">
-      <p>for <b>MJoto.pl</b> by Magdalena Jędrzejczyk</p>
+      <p>for <b>CompanyName</b> by Magdalena Jędrzejczyk</p>
     </div>
   </div>
 
@@ -89,12 +86,12 @@
         showDiv($("#mainPageContent"));
       });
 
-      $("#menu-aboutus").click(function(){
-        showDiv($("#aboutUsContent"));
+      $("#menu-1").click(function(){
+        showDiv($("#menu1"));
       });
 
-      $("#menu-contact").click(function(){
-        showDiv($("#contactContent"));
+      $("#menu-3").click(function(){
+        showDiv($("#menu3"));
       });
 
     });
